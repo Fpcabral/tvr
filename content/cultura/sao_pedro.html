@@ -52,11 +52,13 @@
               </li>
             </ul>
 
-            <!-- <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Sobre</a>
+                <a class="nav-link tradution" data-tradution="en" style="display:inline; cursor:pointer;">EN</a>
+                <a class="nav-link tradution" data-tradution="es" style="display:inline; cursor:pointer;">ES</a>
+                <a class="nav-link tradution" data-tradution="pt" style="display:inline; cursor:pointer;">PT</a>
               </li>
-            </ul> -->
+            </ul>
           </div>
         </nav>
         <!--end:Nav -->
@@ -90,7 +92,7 @@
             </div>
             <div class="row">
               <div class="col-12">
-		      <p class="h4">
+		      <p class="h4" id="description">
 Com a sua origem no estilo barroco, foi construída em 1528 a mando de D. Pedro de Castro, abade de Mouçós. Tendo a sua frontaria decorada, é de notar a riqueza da talha e o teto em caixotões, é também, a única igreja de Vila Real com duas torres sineiras em Vila Real. 
 </p>
               </div>
@@ -145,4 +147,25 @@ Com a sua origem no estilo barroco, foi construída em 1528 a mando de D. Pedro 
     </footer>
     <script src="../../assets/js/main.min.js"></script>
   </body>
+  <script>
+
+    $(".tradution").click(function(){
+      var language = $(this).attr('data-tradution');
+      if(language == 'pt'){
+        $("#description").html("")
+        $("#description").html("Com a sua origem no estilo barroco, foi construída em 1528 a mando de D. Pedro de Castro, abade de Mouçós. Tendo a sua frontaria decorada, é de notar a riqueza da talha e o teto em caixotões, é também, a única igreja de Vila Real com duas torres sineiras em Vila Real.")
+      }
+      if(language == 'en'){
+        $("#description").html("")
+        $("#description").html("With its origin in the baroque style, it was built in 1528 at the behest of D. Pedro de Castro, Abbot of Mouçós. Having its frontage decorated, it is worth noting the richness of the carving and the coffered ceiling, it is also, the only church in Vila Real with two bell towers. ")
+      }
+      if(language == 'es'){
+        $("#description").html("")
+        $("#description").html("Con su origen en el estilo barroco, fue construido en 1528 a instancias de D. Pedro de Castro, Abad de Mouçós. Con su fachada decorada, cabe destacar la riqueza de las tallas y el artesonado, es también, la única iglesia de Vila Real con dos campanarios en Vila Real. ")
+      }
+
+
+    })
+
+  </script>
 </html>

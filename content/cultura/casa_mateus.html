@@ -52,11 +52,13 @@
               </li>
             </ul>
 
-            <!-- <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Sobre</a>
+                <a class="nav-link tradution" data-tradution="en" style="display:inline; cursor:pointer;">EN</a>
+                <a class="nav-link tradution" data-tradution="es" style="display:inline; cursor:pointer;">ES</a>
+                <a class="nav-link tradution" data-tradution="pt" style="display:inline; cursor:pointer;">PT</a>
               </li>
-            </ul> -->
+            </ul>
           </div>
         </nav>
         <!--end:Nav -->
@@ -90,7 +92,7 @@
             </div>
             <div class="row">
               <div class="col-12">
-		      <p class="h4">
+		      <p class="h4" id="description">
                         Mais uma obra atribuída a Nicolau Nasoni, a casa de Mateus, remonta ao século XVIII e é um belo exemplar da arquitetura barroca de Portugal.<br/> 
 Interiormente, possui uma biblioteca e tem um valioso acervo museológico, de onde se destaca uma edição exclusiva da obra “Os Lusíadas”, de Luís de Camões. 
 </p>
@@ -155,4 +157,25 @@ Fundação da Casa de Mateus 5000-291 Vila Real
     </footer>
     <script src="../../assets/js/main.min.js"></script>
   </body>
+  <script>
+
+    $(".tradution").click(function(){
+      var language = $(this).attr('data-tradution');
+      if(language == 'pt'){
+        $("#description").html("")
+        $("#description").html("Mais uma obra atribuída a Nicolau Nasoni, a casa de Mateus, remonta ao século XVIII e é um belo exemplar da arquitetura barroca de Portugal.<br/>Interiormente, possui uma biblioteca e tem um valioso acervo museológico, de onde se destaca uma edição exclusiva da obra \"Os Lusíadas\", de Luís de Camões.")
+      }
+      if(language == 'es'){
+        $("#description").html("")
+        $("#description").html("Otra obra atribuida a Nicolau Nasoni, la casa de Mateus, data del siglo XVIII y es un hermoso ejemplo de la arquitectura barroca en Portugal.<br/>En su interior, tiene una biblioteca y una valiosa colección de museo, de la que destaca una edición exclusiva de \"Os Lusíadas\", de Luís de Camões. ")
+      }
+      if(language == 'en'){
+        $("#description").html("")
+        $("#description").html("Another work attributed to Nicolau Nasoni, the house of Mateus, dates back to the 18th century and is a beautiful example of the baroque architecture of Portugal.<br/> Inside, it has a library and a valuable museum collection, from which an exclusive edition of \"Os Lusíadas\", by Luís de Camões, stands out.")
+      }
+
+
+    })
+
+  </script>
 </html>

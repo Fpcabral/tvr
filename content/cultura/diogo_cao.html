@@ -52,11 +52,13 @@
               </li>
             </ul>
 
-            <!-- <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Sobre</a>
+                <a class="nav-link tradution" data-tradution="en" style="display:inline; cursor:pointer;">EN</a>
+                <a class="nav-link tradution" data-tradution="es" style="display:inline; cursor:pointer;">ES</a>
+                <a class="nav-link tradution" data-tradution="pt" style="display:inline; cursor:pointer;">PT</a>
               </li>
-            </ul> -->
+            </ul>
           </div>
         </nav>
         <!--end:Nav -->
@@ -90,8 +92,8 @@
             </div>
             <div class="row">
               <div class="col-12">
-		      <p class="h4">
-Edifício de traça medieval, encontra-se localizada no centro da cidade. Terá sido aqui, que nasceu o navegador Diogo Cão, segundo dita a tradição. 
+		      <p class="h4" id="description">
+Edifício de traço medieval, encontra-se localizada no centro da cidade. Terá sido aqui, que nasceu o navegador Diogo Cão, segundo dita a tradição. 
 </p>
               </div>
                 <div class="row mt-5">
@@ -145,4 +147,25 @@ Edifício de traça medieval, encontra-se localizada no centro da cidade. Terá 
     </footer>
     <script src="../../assets/js/main.min.js"></script>
   </body>
-<
+  <script>
+
+    $(".tradution").click(function(){
+      var language = $(this).attr('data-tradution');
+      if(language == 'pt'){
+        $("#description").html("")
+        $("#description").html("Edifício de traço medieval, encontra-se localizada no centro da cidade. Terá sido aqui, que nasceu o navegador Diogo Cão, segundo dita a tradição. ")
+      }
+      if(language == 'es'){
+        $("#description").html("")
+        $("#description").html("Edificio medieval, situado en el centro de la ciudad. Aquí nació el navegante Diogo Cão, según la tradición.") 
+      }
+      if(language == 'en'){
+        $("#description").html("")
+        $("#description").html("Medieval building, located in the center of the city. It was here that the navigator Diogo Cão was born, according to tradition. ")
+      }
+
+
+    })
+
+  </script>
+</html>

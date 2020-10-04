@@ -52,11 +52,13 @@
               </li>
             </ul>
 
-            <!-- <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Sobre</a>
+                <a class="nav-link tradution" data-tradution="en" style="display:inline; cursor:pointer;">EN</a>
+                <a class="nav-link tradution" data-tradution="es" style="display:inline; cursor:pointer;">ES</a>
+                <a class="nav-link tradution" data-tradution="pt" style="display:inline; cursor:pointer;">PT</a>
               </li>
-            </ul> -->
+            </ul>
           </div>
         </nav>
         <!--end:Nav -->
@@ -90,7 +92,7 @@
             </div>
             <div class="row">
               <div class="col-12">
-		      <p class="h4">
+		      <p class="h4" id="description">
 Classificada como Monumentos Nacional, foi sagrada Sé de Vila Real em 1924. Trata-se de um templo do Século XV, de três naves, de estilo Românico, com influências do gótico, como vemos pelos arcos em ogiva. Os vitrais são responsabilidade de João Vieira e a torre sineira foi erguida em 1742. Apesar de ter sofrido um incendio em 1837, foi reconstruída na década seguinte. 
 </p> 
               </div>
@@ -145,4 +147,25 @@ Classificada como Monumentos Nacional, foi sagrada Sé de Vila Real em 1924. Tra
     </footer>
     <script src="../../assets/js/main.min.js"></script>
   </body>
+  <script>
+
+    $(".tradution").click(function(){
+      var language = $(this).attr('data-tradution');
+      if(language == 'pt'){
+        $("#description").html("")
+        $("#description").html("Classificada como Monumentos Nacional, foi sagrada Sé de Vila Real em 1924. Trata-se de um templo do Século XV, de três naves, de estilo Românico, com influências do gótico, como vemos pelos arcos em ogiva. Os vitrais são responsabilidade de João Vieira e a torre sineira foi erguida em 1742. Apesar de ter sofrido um incendio em 1837, foi reconstruída na década seguinte. ")
+      }
+      if(language == 'en'){
+        $("#description").html("")
+        $("#description").html("Classified as National Monuments, was sacred See of Vila Real in 1924. It is a XV century temple, with three naves, Romanesque style, with Gothic influences, as we can see by the ogiva arches. The stained-glass windows are João Vieira's responsibility and the bell tower was erected in 1742. Although it suffered a fire in 1837, it was rebuilt in the following decade.")
+      }
+      if(language == 'es'){
+        $("#description").html("")
+        $("#description").html("Clasificado como Monumento Nacional, fue sede sagrada de Vila Real en 1924. Es un templo del siglo XV, con tres naves, de estilo románico, con influencias del gótico, como vemos por los arcos ogivales. Las vidrieras son responsabilidad de João Vieira y el campanario fue erigido en 1742. Aunque sufrió un incendio en 1837, fue reconstruido en la década siguiente.")
+      }
+
+
+    })
+
+  </script>
 </html>

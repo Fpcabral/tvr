@@ -52,11 +52,13 @@
               </li>
             </ul>
 
-            <!-- <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Sobre</a>
+                <a class="nav-link tradution" data-tradution="en" style="display:inline; cursor:pointer;">EN</a>
+                <a class="nav-link tradution" data-tradution="es" style="display:inline; cursor:pointer;">ES</a>
+                <a class="nav-link tradution" data-tradution="pt" style="display:inline; cursor:pointer;">PT</a>
               </li>
-            </ul> -->
+            </ul>
           </div>
         </nav>
         <!--end:Nav -->
@@ -90,7 +92,7 @@
             </div>
             <div class="row">
               <div class="col-12">
-		      <p class="h4">
+		      <p class="h4" id="description">
  Trata-se de um pequeno templo românico-gótico, atribuído à época de transição do século XIII para o século XIV, alberga sepulturas de ilustres figuras de Vila Real, como é o caso de João Teixeira de Macedo, fidalgo da casa Real e Lourenço Viegas, companheiro de D. Afonso Henriques. 
 </p>
               </div>
@@ -145,4 +147,25 @@
     </footer>
     <script src="../../assets/js/main.min.js"></script>
   </body>
+  <script>
+
+    $(".tradution").click(function(){
+      var language = $(this).attr('data-tradution');
+      if(language == 'pt'){
+        $("#description").html("")
+        $("#description").html(" Trata-se de um pequeno templo românico-gótico, atribuído à época de transição do século XIII para o século XIV, alberga sepulturas de ilustres figuras de Vila Real, como é o caso de João Teixeira de Macedo, fidalgo da casa Real e Lourenço Viegas, companheiro de D. Afonso Henriques. ")
+      }
+      if(language == 'es'){
+        $("#description").html("")
+        $("#description").html(" Es un pequeño templo románico-gótico, atribuido al período de transición del siglo XIII al siglo XIV, y alberga tumbas de figuras ilustres de Vila Real, como João Teixeira de Macedo, noble de la Casa Real, y Lourenço Viegas, compañero de D. Afonso Henriques.")
+      }
+      if(language == 'en'){
+        $("#description").html("")
+        $("#description").html("It is a small roman-gothic temple, attributed to the time of transition from the 13th century to the 14th century, houses graves of illustrious figures from Vila Real, such as João Teixeira de Macedo, nobleman of the Royal House, and Lourenço Viegas, companion of D. Afonso Henriques. ")
+      }
+
+
+    })
+
+  </script>
 </html>

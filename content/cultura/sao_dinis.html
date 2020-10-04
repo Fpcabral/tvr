@@ -52,11 +52,13 @@
               </li>
             </ul>
 
-            <!-- <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Sobre</a>
+                <a class="nav-link tradution" data-tradution="en" style="display:inline; cursor:pointer;">EN</a>
+                <a class="nav-link tradution" data-tradution="es" style="display:inline; cursor:pointer;">ES</a>
+                <a class="nav-link tradution" data-tradution="pt" style="display:inline; cursor:pointer;">PT</a>
               </li>
-            </ul> -->
+            </ul>
           </div>
         </nav>
         <!--end:Nav -->
@@ -90,7 +92,7 @@
             </div>
             <div class="row">
               <div class="col-12">
-		      <p class="h4"> As suas linhas austeras e sem grandes elementos decorativos, apontam para o estilo Românico. No seu interior, encontra-se a imagem da Nossa Senhora a Branca, que esteve por cima do pórtico das muralhas da vila primitiva.</p> 
+		      <p class="h4"id="description"> As suas linhas austeras e sem grandes elementos decorativos, apontam para o estilo Românico. No seu interior, encontra-se a imagem da Nossa Senhora a Branca, que esteve por cima do pórtico das muralhas da vila primitiva.</p> 
               </div>
               <div class="row mt-5">
                 <div class="col-md-11 ml-auto display-3 h1">“O nome de Trasmontano, que quer dizer filho de Trás-os-Montes, pois assim se chama o Reino Maravilhoso de que vos falei.” (Miguel Torga)</div>
@@ -143,4 +145,25 @@
     </footer>
     <script src="../../assets/js/main.min.js"></script>
   </body>
+  <script>
+
+    $(".tradution").click(function(){
+      var language = $(this).attr('data-tradution');
+      if(language == 'pt'){
+        $("#description").html("")
+        $("#description").html("As suas linhas austeras e sem grandes elementos decorativos, apontam para o estilo Românico. No seu interior, encontra-se a imagem da Nossa Senhora a Branca, que esteve por cima do pórtico das muralhas da vila primitiva.")
+      }
+      if(language == 'en'){
+        $("#description").html("")
+        $("#description").html("Its austere lines, without great decorative elements, point to the Romanesque style. Inside, there is the image of Our Lady the White, which was above the portico of the primitive village walls.")
+      }
+      if(language == 'es'){
+        $("#description").html("")
+        $("#description").html("Sus líneas austeras y sin grandes elementos decorativos apuntan al estilo románico. Dentro, hay una imagen de Nuestra Señora Blanca, que estaba sobre el pórtico de las primitivas murallas del pueblo.")
+      }
+
+
+    })
+
+  </script>
 </html>

@@ -52,11 +52,13 @@
               </li>
             </ul>
 
-            <!-- <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Sobre</a>
+                <a class="nav-link tradution" data-tradution="en" style="display:inline; cursor:pointer;">EN</a>
+                <a class="nav-link tradution" data-tradution="es" style="display:inline; cursor:pointer;">ES</a>
+                <a class="nav-link tradution" data-tradution="pt" style="display:inline; cursor:pointer;">PT</a>
               </li>
-            </ul> -->
+            </ul>
           </div>
         </nav>
         <!--end:Nav -->
@@ -90,7 +92,7 @@ Museu do Som e da Imagem
             </div>
             <div class="row">
               <div class="col-12">
-		      <p class="h4">
+		      <p class="h4" id="description">
 Com sete salas e várias secções interativas, dedicadas sucessivamente ao primeiro Teatro de Vila Real (1846), ao Teatro-Circo (1892), ao Teatro Avenida (1930), á história da fotografia, á história do cinema e a exposições temporárias. 
 </p>
               </div>
@@ -154,4 +156,25 @@ Edifício do Teatro Municipal Alameda de Grasse, 5000-703 Vila Real
     </footer>
     <script src="../../assets/js/main.min.js"></script>
   </body>
+  <script>
+
+    $(".tradution").click(function(){
+      var language = $(this).attr('data-tradution');
+      if(language == 'pt'){
+        $("#description").html("")
+        $("#description").html("Com sete salas e várias secções interativas, dedicadas sucessivamente ao primeiro Teatro de Vila Real (1846), ao Teatro-Circo (1892), ao Teatro Avenida (1930), á história da fotografia, á história do cinema e a exposições temporárias.")
+      }
+      if(language == 'en'){
+        $("#description").html("")
+        $("#description").html("With seven rooms and several interactive sections, dedicated successively to the first Theatre of Vila Real (1846), the Theatre-Circo (1892), the Avenue Theatre (1930), the history of photography, the history of cinema and temporary exhibitions.")
+      }
+      if(language == 'es'){
+        $("#description").html("")
+        $("#description").html(" Con siete salas y varias secciones interactivas, dedicadas sucesivamente al primer Teatro de Vila Real (1846), al Teatro-Circo (1892), al Teatro de la Avenida (1930), a la historia de la fotografía, a la historia del cine y a las exposiciones temporales.")
+      }
+
+
+    })
+
+  </script>
 </html>

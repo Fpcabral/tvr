@@ -52,11 +52,13 @@
               </li>
             </ul>
 
-            <!-- <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Sobre</a>
+                <a class="nav-link tradution" data-tradution="en" style="display:inline; cursor:pointer;">EN</a>
+                <a class="nav-link tradution" data-tradution="es" style="display:inline; cursor:pointer;">ES</a>
+                <a class="nav-link tradution" data-tradution="pt" style="display:inline; cursor:pointer;">PT</a>
               </li>
-            </ul> -->
+            </ul>
           </div>
         </nav>
         <!--end:Nav -->
@@ -90,7 +92,7 @@
             </div>
             <div class="row">
               <div class="col-12">
-		      <p class="h4">
+		      <p class="h4" id="description">
 Contruído em 1680, a mando da Ordem Terceira de São Francisco, destacam-se durante o século XIX, a construção da sacristia e da torre sineira. Com uma frontaria revestida a azulejo, que se acredita ter sido feita nos finais do século XIX ou inícios do século XX. <br/>
 É no segundo fim de semana de Julho que, anualmente se dá a passagem do Senhor do Clavário, procissão tida como exponente máxima da fé dos Vila-Realenses. 
 </p>
@@ -146,4 +148,25 @@ Contruído em 1680, a mando da Ordem Terceira de São Francisco, destacam-se dur
     </footer>
     <script src="../../assets/js/main.min.js"></script>
   </body>
+  <script>
+
+    $(".tradution").click(function(){
+      var language = $(this).attr('data-tradution');
+      if(language == 'pt'){
+        $("#description").html("")
+        $("#description").html("Contruído em 1680, a mando da Ordem Terceira de São Francisco, destacam-se durante o século XIX, a construção da sacristia e da torre sineira. Com uma frontaria revestida a azulejo, que se acredita ter sido feita nos finais do século XIX ou inícios do século XX. <br/>É no segundo fim de semana de Julho que, anualmente se dá a passagem do Senhor do Clavário, procissão tida como exponente máxima da fé dos Vila-Realenses. ")
+      }
+      if(language == 'es'){
+        $("#description").html("")
+        $("#description").html("Construida en 1680 a instancias de la Tercera Orden de San Francisco, la construcción de la sacristía y el campanario destacó durante el siglo XIX. Con un frente recubierto de azulejos, que se cree que fue hecho a finales del siglo XIX o principios del XX. <BR/>Es el segundo fin de semana de julio cuando tiene lugar cada año el paso del Señor de Clavário, una procesión considerada como el máximo exponente de la fe de los vila-realenses.")
+      }
+      if(language == 'en'){
+        $("#description").html("")
+        $("#description").html("Built in 1680 at the behest of the Third Order of St. Francis, the construction of the sacristy and the bell tower stood out during the 19th century. With a tile-coated frontage, which is believed to have been made in the late nineteenth century or early twentieth century. <Br/>It is on the second weekend of July that the Lord of Clavário, a procession considered the maximum exponent of the faith of the Vila-Realenses, takes place every year.")
+      }
+
+
+    })
+
+  </script>
 </html>
