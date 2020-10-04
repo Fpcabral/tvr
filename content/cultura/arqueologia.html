@@ -18,6 +18,8 @@
     />
     <link rel="stylesheet" href="../../assets/css/main.min.css" />
     <link rel="stylesheet" href="../../assets/css/rtl.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   </head>
 
   <body>
@@ -52,11 +54,13 @@
               </li>
             </ul>
 
-            <!-- <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Sobre</a>
+                <a class="nav-link tradution" data-tradution="en" style="display:inline;">EN</a>
+                <a class="nav-link tradution" data-tradution="es" style="display:inline;">ES</a>
+                <a class="nav-link tradution" data-tradution="pt" style="display:inline;">PT</a>
               </li>
-            </ul> -->
+            </ul>
           </div>
         </nav>
         <!--end:Nav -->
@@ -90,7 +94,7 @@
             </div>
             <div class="row">
               <div class="col-12">
-		      <p class="h4">Este museu pretende dar a conhecer as exposições permanentes de numismática e de arqueologia, disponibilizando um serviço educativo, que complementa as visitas. Está ainda disponível ao publico, o centro de Documentação, que inclui obras nas áreas da história local, arqueológica de numismática, entre outras.
+		      <p class="h4" id="description">Este museu pretende dar a conhecer as exposições permanentes de numismática e de arqueologia, disponibilizando um serviço educativo, que complementa as visitas. Está ainda disponível ao publico, o centro de Documentação, que inclui obras nas áreas da história local, arqueológica de numismática, entre outras.
 </p>
               </div>
               <div class="col-sm-3">
@@ -153,4 +157,28 @@ Avenida 1º de Maio, 5000-620 Vila Real
     </footer>
     <script src="../../assets/js/main.min.js"></script>
   </body>
+
+
+  <script>
+
+    $(".tradution").click(function(){
+      var language = $(this).attr('data-tradution');
+      if(language == 'en'){
+        $("#description").html("")
+        $("#description").html("This museum intends to showcase the permanent exhibitions of numismatics and archeology, providing an educational service that complements the visits. The Documentation Center is also available to the public, which includes works in the areas of local history, archeological numismatics, among others.")
+      }
+      if(language == 'es'){
+        $("#description").html("")
+        $("#description").html("Este museo pretende mostrar las exposiciones permanentes de numismática y arqueología, brindando un servicio educativo que complementa las visitas. También está a disposición del público el Centro de Documentación, que incluye trabajos en las áreas de historia local, numismática arqueológica, entre otros.")
+      }
+      if(language == 'pt'){
+        $("#description").html("")
+        $("#description").html("Este museu pretende dar a conhecer as exposições permanentes de numismática e de arqueologia, disponibilizando um serviço educativo, que complementa as visitas. Está ainda disponível ao publico, o centro de Documentação, que inclui obras nas áreas da história local, arqueológica de numismática, entre outras.")
+      }
+
+
+    })
+
+  </script>
+
 </html>
