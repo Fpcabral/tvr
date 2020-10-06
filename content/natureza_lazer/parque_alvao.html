@@ -52,11 +52,28 @@
               </li>
             </ul>
 
-            <!-- <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Sobre</a>
+                <a
+                  class="nav-link tradution"
+                  data-tradution="en"
+                  style="display: inline; cursor: pointer"
+                  >EN</a
+                >
+                <a
+                  class="nav-link tradution"
+                  data-tradution="es"
+                  style="display: inline; cursor: pointer"
+                  >ES</a
+                >
+                <a
+                  class="nav-link tradution"
+                  data-tradution="pt"
+                  style="display: inline; cursor: pointer"
+                  >PT</a
+                >
               </li>
-            </ul> -->
+            </ul>
           </div>
         </nav>
         <!--end:Nav -->
@@ -68,9 +85,7 @@
         <div class="container">
           <div class="row d-flex align-items-start">
             <div class="col-md-11">
-              <h1 class="display-3">
-                Parque Natural do Alvão
-              </h1>
+              <h1 class="display-3">Parque Natural do Alvão</h1>
             </div>
           </div>
         </div>
@@ -81,29 +96,53 @@
         <div id="portfolio" class="container">
           <div id="portfolio-filters">
             <ul class="p-0">
-              <li style="list-style-type:none;"><a style="color:#CF9725;" href="../../index.html">voltar</a></li>
+              <li style="list-style-type: none">
+                <a style="color: #cf9725" href="../../index.html">voltar</a>
+              </li>
             </ul>
             <div class="row mb-5">
               <div class="col-12">
-                <img src="../../assets/img/parque-alvao.jpg" alt="" style="width:600px; height:auto;">
+                <img
+                  src="../../assets/img/parque-alvao.jpg"
+                  alt=""
+                  style="width: 600px; height: auto"
+                />
               </div>
             </div>
             <div class="row">
               <div class="col-12">
-                <p class="h4">Com uma área de 7220 hectares e situado na cadeia montanhosa definida pelas serras do Alvão e do Marão, o Parque Natural do Alvão abrange partes do concelho de Vila Real e Mondim de Basto. Nas proximidades encontra-se a maior queda de água da Península Ibérica, a das fisgas de Ermelo.<br/>As condições simultâneas de clima e altitude são as responsáveis pela diversidade e diferenciação da cobertura vegetal.<br/> 
-A intervenção do homem no Parque Natural do Alvão tem sido indispensável para a manutenção e equilíbrio da fauna selvagem. </p>
+                <p class="h4" id="description">
+                  Com uma área de 7220 hectares e situado na cadeia montanhosa
+                  definida pelas serras do Alvão e do Marão, o Parque Natural do
+                  Alvão abrange partes do concelho de Vila Real e Mondim de
+                  Basto. Nas proximidades encontra-se a maior queda de água da
+                  Península Ibérica, a das fisgas de Ermelo. As condições
+                  simultâneas de clima e altitude são as responsáveis pela
+                  diversidade e diferenciação da cobertura vegetal. A
+                  intervenção do homem no Parque Natural do Alvão tem sido
+                  indispensável para a manutenção e equilíbrio da fauna
+                  selvagem.
+                </p>
               </div>
               <div class="col-sm-3">
                 <ul class="mt-5 p-0">
-                  <li style="list-style-type:none;">Contacto: 259302830</li>
-                  <li style="list-style-type:none;"><a href="www.icnf.pt">www.icnf.pt</a></li>
-                  <li style="list-style-type:none;">pnal@icnf.pt</li>
-                  <li style="list-style-type:none;">Largo de Freitas, 5000-268 Vila Real</li>
+                  <li style="list-style-type: none">Contacto: 259302830</li>
+                  <li style="list-style-type: none">
+                    <a href="www.icnf.pt">www.icnf.pt</a>
+                  </li>
+                  <li style="list-style-type: none">pnal@icnf.pt</li>
+                  <li style="list-style-type: none">
+                    Largo de Freitas, 5000-268 Vila Real
+                  </li>
                 </ul>
               </div>
-        <div class="row mt-5">
-          <div class="col-md-11 ml-auto display-3 h1">“O nome de Trasmontano, que quer dizer filho de Trás-os-Montes, pois assim se chama o Reino Maravilhoso de que vos falei.” (Miguel Torga)</div>
-        </div>
+              <div class="row mt-5">
+                <div class="col-md-11 ml-auto display-3 h1">
+                  “O nome de Trasmontano, que quer dizer filho de
+                  Trás-os-Montes, pois assim se chama o Reino Maravilhoso de que
+                  vos falei.” (Miguel Torga)
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -152,4 +191,27 @@ A intervenção do homem no Parque Natural do Alvão tem sido indispensável par
     </footer>
     <script src="../../assets/js/main.min.js"></script>
   </body>
+  <script>
+    $(".tradution").click(function () {
+      var language = $(this).attr("data-tradution");
+      if (language == "pt") {
+        $("#description").html("");
+        $("#description").html(
+          "Com uma área de 7220 hectares e situado na cadeia montanhosa definida pelas serras do Alvão e do Marão, o Parque Natural do Alvão abrange partes do concelho de Vila Real e Mondim de Basto. Nas proximidades encontra-se a maior queda de água da Península Ibérica, a das fisgas de Ermelo. As condições simultâneas de clima e altitude são as responsáveis pela diversidade e diferenciação da cobertura vegetal. A intervenção do homem no Parque Natural do Alvão tem sido indispensável para a manutenção e equilíbrio da fauna selvagem."
+        );
+      }
+      if (language == "en") {
+        $("#description").html("");
+        $("#description").html(
+          "With an area of ​​7220 hectares and located in the mountain range defined by the mountains of Alvão and Marão, the Parque Natural do Alvão covers parts of the municipality of Vila Real and Mondim de Basto. Nearby is the largest waterfall in the Iberian Peninsula, that of Ermelo slingshots. The conditions simultaneous climate and altitude are responsible for diversity and differentiation of vegetation cover. THE intervention of man in the Alvão Natural Park has been indispensable for the maintenance and balance of fauna wild."
+        );
+      }
+      if (language == "es") {
+        $("#description").html("");
+        $("#description").html(
+          "Con una extensión de 7220 hectáreas y ubicado en la cordillera definido por las montañas de Alvão y Marão, el Parque Natural do Alvão cubre partes del municipio de Vila Real y Mondim de Basto. Cerca se encuentra la cascada más grande del Península Ibérica, la de Ermelo tirachinas. Las condiciones El clima y la altitud simultáneos son responsables de diversidad y diferenciación de la cobertura vegetal. LOS La intervención del hombre en el Parque Natural de Alvão ha sido indispensable para el mantenimiento y equilibrio de la fauna salvaje."
+        );
+      }
+    });
+  </script>
 </html>

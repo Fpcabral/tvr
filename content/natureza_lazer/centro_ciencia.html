@@ -52,11 +52,28 @@
               </li>
             </ul>
 
-            <!-- <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Sobre</a>
+                <a
+                  class="nav-link tradution"
+                  data-tradution="en"
+                  style="display: inline; cursor: pointer"
+                  >EN</a
+                >
+                <a
+                  class="nav-link tradution"
+                  data-tradution="es"
+                  style="display: inline; cursor: pointer"
+                  >ES</a
+                >
+                <a
+                  class="nav-link tradution"
+                  data-tradution="pt"
+                  style="display: inline; cursor: pointer"
+                  >PT</a
+                >
               </li>
-            </ul> -->
+            </ul>
           </div>
         </nav>
         <!--end:Nav -->
@@ -68,9 +85,7 @@
         <div class="container">
           <div class="row d-flex align-items-start">
             <div class="col-md-11">
-              <h1 class="display-3">
-               Centro de Ciência 
-              </h1>
+              <h1 class="display-3">Centro de Ciência</h1>
             </div>
           </div>
         </div>
@@ -81,28 +96,47 @@
         <div id="portfolio" class="container">
           <div id="portfolio-filters">
             <ul class="p-0">
-              <li style="list-style-type:none;"><a style="color:#CF9725;" href="../../index.html">voltar</a></li>
+              <li style="list-style-type: none">
+                <a style="color: #cf9725" href="../../index.html">voltar</a>
+              </li>
             </ul>
             <div class="row mb-5">
               <div class="col-12">
-                <img src="../../assets/img/centro-ciencia.jpg" alt="" style="width:600px; height:auto;">
+                <img
+                  src="../../assets/img/centro-ciencia.jpg"
+                  alt=""
+                  style="width: 600px; height: auto"
+                />
               </div>
             </div>
             <div class="row">
               <div class="col-12">
-                <p class="h4">Localizado na margem direita do rio Corgo e no coração do Parque Corgo, o centro de ciência alberga um espaço expositivo único na região que procura emergir o visitante num ambiente multissensorial. Conta com uma sala multiusos, laboratórios, uma área de estufas e uma exposição permanente.</p>
+                <p class="h4" id="description">
+                  Localizado na margem direita do rio Corgo e no coração do
+                  Parque Corgo, o centro de ciência alberga um espaço expositivo
+                  único na região que procura emergir o visitante num ambiente
+                  multissensorial. Conta com uma sala multiusos, laboratórios,
+                  uma área de estufas e uma exposição permanente.
+                </p>
               </div>
               <div class="col-sm-3">
                 <ul class="mt-5 p-0">
-                  <li style="list-style-type:none;">Contacto: 259308100</li>
-                  <li style="list-style-type:none;">centro.ciencia@cm-vilareal.pt</li>
-                  <li style="list-style-type:none;">
-Rua Diogo Dias Ferreira, s/n – Parque Corgo 5000-559 Vila Real
+                  <li style="list-style-type: none">Contacto: 259308100</li>
+                  <li style="list-style-type: none">
+                    centro.ciencia@cm-vilareal.pt
+                  </li>
+                  <li style="list-style-type: none">
+                    Rua Diogo Dias Ferreira, s/n – Parque Corgo 5000-559 Vila
+                    Real
                   </li>
                 </ul>
               </div>
               <div class="row mt-5">
-                <div class="col-md-11 ml-auto display-3 h1">“O nome de Trasmontano, que quer dizer filho de Trás-os-Montes, pois assim se chama o Reino Maravilhoso de que vos falei.” (Miguel Torga)</div>
+                <div class="col-md-11 ml-auto display-3 h1">
+                  “O nome de Trasmontano, que quer dizer filho de
+                  Trás-os-Montes, pois assim se chama o Reino Maravilhoso de que
+                  vos falei.” (Miguel Torga)
+                </div>
               </div>
             </div>
           </div>
@@ -152,4 +186,27 @@ Rua Diogo Dias Ferreira, s/n – Parque Corgo 5000-559 Vila Real
     </footer>
     <script src="../../assets/js/main.min.js"></script>
   </body>
+  <script>
+    $(".tradution").click(function () {
+      var language = $(this).attr("data-tradution");
+      if (language == "pt") {
+        $("#description").html("");
+        $("#description").html(
+          " Localizado na margem direita do rio Corgo e no coração do Parque Corgo, o centro de ciência alberga um espaço expositivo único na região que procura emergir o visitante num ambiente multissensorial. Conta com uma sala multiusos, laboratórios, uma área de estufas e uma exposição permanente."
+        );
+      }
+      if (language == "en") {
+        $("#description").html("");
+        $("#description").html(
+          "Located on the right bank of the Corgo River and in the heart of Parque Corgo, the science center houses an exhibition space unique in the region that seeks to emerge the visitor in an environment multisensory. It has a multipurpose room, laboratories, a greenhouse area and a permanent exhibition."
+        );
+      }
+      if (language == "es") {
+        $("#description").html("");
+        $("#description").html(
+          "Ubicado en la margen derecha del río Corgo y en el corazón de Parque Corgo, el centro de ciencias alberga un espacio expositivo único en la región que busca emerger al visitante en un entorno multisensorial. Cuenta con salón de usos múltiples, laboratorios, un área de invernadero y una exposición permanente."
+        );
+      }
+    });
+  </script>
 </html>

@@ -52,11 +52,28 @@
               </li>
             </ul>
 
-            <!-- <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Sobre</a>
+                <a
+                  class="nav-link tradution"
+                  data-tradution="en"
+                  style="display: inline; cursor: pointer"
+                  >EN</a
+                >
+                <a
+                  class="nav-link tradution"
+                  data-tradution="es"
+                  style="display: inline; cursor: pointer"
+                  >ES</a
+                >
+                <a
+                  class="nav-link tradution"
+                  data-tradution="pt"
+                  style="display: inline; cursor: pointer"
+                  >PT</a
+                >
               </li>
-            </ul> -->
+            </ul>
           </div>
         </nav>
         <!--end:Nav -->
@@ -68,9 +85,7 @@
         <div class="container">
           <div class="row d-flex align-items-start">
             <div class="col-md-11">
-              <h1 class="display-3">
-                Jardim Botânico na UTAD
-              </h1>
+              <h1 class="display-3">Jardim Botânico na UTAD</h1>
             </div>
           </div>
         </div>
@@ -81,30 +96,49 @@
         <div id="portfolio" class="container">
           <div id="portfolio-filters">
             <ul class="p-0">
-              <li style="list-style-type:none;"><a style="color:#CF9725;" href="../../index.html">voltar</a></li>
+              <li style="list-style-type: none">
+                <a style="color: #cf9725" href="../../index.html">voltar</a>
+              </li>
             </ul>
             <div class="row mb-5">
               <div class="col-12">
-                <img src="../../assets/img/jardim-botanico.jpg" alt="" style="width:600px; height:auto;">
+                <img
+                  src="../../assets/img/jardim-botanico.jpg"
+                  alt=""
+                  style="width: 600px; height: auto"
+                />
               </div>
             </div>
             <div class="row">
               <div class="col-12">
-                <p class="h4">O jardim botânico da Universidade de Trás-os-Montes e Alto Douro regista atualmente cerca de mil espécies constituindo um variado conjunto arquitetónico-paisagista no interior do campus da universidade (Quinta de Prados e Quinta de Nossa Senhora de Lurdes).<br/> 
-A idealização deste jardim, com cerca de 80 hectares, deve-se ao professor Luís Torres de Castro. 
+                <p class="h4" id="description">
+                  O jardim botânico da Universidade de Trás-os-Montes e Alto
+                  Douro regista atualmente cerca de mil espécies constituindo um
+                  variado conjunto arquitetónico-paisagista no interior do
+                  campus da universidade (Quinta de Prados e Quinta de Nossa
+                  Senhora de Lurdes).A idealização deste jardim, com cerca de 80
+                  hectares, deve-se ao professor Luís Torres de Castro.
+                </p>
               </div>
+
               <div class="col-sm-3">
                 <ul class="mt-5 p-0">
-                  <li style="list-style-type:none;">Contacto: 259350400</li>
-                  <li style="list-style-type:none;"><a href="www.jb.utad.pt">www.jb.utad.pt</a></li>
-                  <li style="list-style-type:none;">
-Universidade Trás-os-Montes e Alto Douro, 5000-801 Vila Real
+                  <li style="list-style-type: none">Contacto: 259350400</li>
+                  <li style="list-style-type: none">
+                    <a href="www.jb.utad.pt">www.jb.utad.pt</a>
+                  </li>
+                  <li style="list-style-type: none">
+                    Universidade Trás-os-Montes e Alto Douro, 5000-801 Vila Real
                   </li>
                 </ul>
               </div>
-                <div class="row mt-5">
-                  <div class="col-md-11 ml-auto display-3 h1">“O nome de Trasmontano, que quer dizer filho de Trás-os-Montes, pois assim se chama o Reino Maravilhoso de que vos falei.” (Miguel Torga)</div>
+              <div class="row mt-5">
+                <div class="col-md-11 ml-auto display-3 h1">
+                  “O nome de Trasmontano, que quer dizer filho de
+                  Trás-os-Montes, pois assim se chama o Reino Maravilhoso de que
+                  vos falei.” (Miguel Torga)
                 </div>
+              </div>
             </div>
           </div>
         </div>
@@ -153,4 +187,27 @@ Universidade Trás-os-Montes e Alto Douro, 5000-801 Vila Real
     </footer>
     <script src="../../assets/js/main.min.js"></script>
   </body>
+  <script>
+    $(".tradution").click(function () {
+      var language = $(this).attr("data-tradution");
+      if (language == "pt") {
+        $("#description").html("");
+        $("#description").html(
+          " O jardim botânico da Universidade de Trás-os-Montes e Alto Douro regista atualmente cerca de mil espécies constituindo um variado conjunto arquitetónico-paisagista no interior do campus da universidade (Quinta de Prados e Quinta de Nossa Senhora de Lurdes).A idealização deste jardim, com cerca de 80 hectares, deve-se ao professor Luís Torres de Castro."
+        );
+      }
+      if (language == "en") {
+        $("#description").html("");
+        $("#description").html(
+          "The botanical garden of the University of Trás-os-Montes and Alto Douro currently registers around one thousand species, constituting a varied architectural-landscape ensemble within the university campus (Quinta de Prados and Quinta de Nossa Senhora de Lurdes) .The idealization of this garden, with about 80 hectares, is due to Professor Luís Torres de Castro."
+        );
+      }
+      if (language == "es") {
+        $("#description").html("");
+        $("#description").html(
+          "El jardín botánico de la Universidad de Trás-os-Montes y Alto El Duero registra actualmente alrededor de mil especies, constituyendo un variado conjunto arquitectónico-paisajístico dentro del campus universitario (Quinta de Prados y Quinta de Nossa Senhora de Lurdes) .La idealización de este jardín, con unos 80 hectáreas, se debe al profesor Luís Torres de Castro."
+        );
+      }
+    });
+  </script>
 </html>

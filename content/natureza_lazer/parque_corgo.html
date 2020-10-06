@@ -52,11 +52,28 @@
               </li>
             </ul>
 
-            <!-- <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Sobre</a>
+                <a
+                  class="nav-link tradution"
+                  data-tradution="en"
+                  style="display: inline; cursor: pointer"
+                  >EN</a
+                >
+                <a
+                  class="nav-link tradution"
+                  data-tradution="es"
+                  style="display: inline; cursor: pointer"
+                  >ES</a
+                >
+                <a
+                  class="nav-link tradution"
+                  data-tradution="pt"
+                  style="display: inline; cursor: pointer"
+                  >PT</a
+                >
               </li>
-            </ul> -->
+            </ul>
           </div>
         </nav>
         <!--end:Nav -->
@@ -68,9 +85,7 @@
         <div class="container">
           <div class="row d-flex align-items-start">
             <div class="col-md-11">
-              <h1 class="display-3">
-                Parque do Corgo
-              </h1>
+              <h1 class="display-3">Parque do Corgo</h1>
             </div>
           </div>
         </div>
@@ -81,20 +96,38 @@
         <div id="portfolio" class="container">
           <div id="portfolio-filters">
             <ul class="p-0">
-              <li style="list-style-type:none;"><a style="color:#CF9725;" href="../../index.html">voltar</a></li>
+              <li style="list-style-type: none">
+                <a style="color: #cf9725" href="../../index.html">voltar</a>
+              </li>
             </ul>
             <div class="row mb-5">
               <div class="col-12">
-                <img src="../../assets/img/parque-corgo.jpg" alt="" style="width:600px; height:auto;">
+                <img
+                  src="../../assets/img/parque-corgo.jpg"
+                  alt=""
+                  style="width: 600px; height: auto"
+                />
               </div>
             </div>
             <div class="row">
               <div class="col-12">
-                <p class="h4">Situado nas margens do rio Corgo, tem uma área de aproximadamente 33 hectares. Encontra-se ligado ao pulmão da cidade, Parque Florestal, e engloba vários aparelhos à disposição de qualquer cidadão, tais como campos polidesportivos, parque de merendas de Codessais, piscinas municipais abertas, parque infantil, cafés, itinerários pedestres e ainda alguns moinhos recuperados.</p>
+                <p class="h4" id="description">
+                  Situado nas margens do rio Corgo, tem uma área de
+                  aproximadamente 33 hectares. Encontra-se ligado ao pulmão da
+                  cidade, Parque Florestal, e engloba vários aparelhos à
+                  disposição de qualquer cidadão, tais como campos
+                  polidesportivos, parque de merendas de Codessais, piscinas
+                  municipais abertas, parque infantil, cafés, itinerários
+                  pedestres e ainda alguns moinhos recuperados.
+                </p>
               </div>
-        <div class="row mt-5">
-          <div class="col-md-11 ml-auto display-3 h1">“O nome de Trasmontano, que quer dizer filho de Trás-os-Montes, pois assim se chama o Reino Maravilhoso de que vos falei.” (Miguel Torga)</div>
-        </div>
+              <div class="row mt-5">
+                <div class="col-md-11 ml-auto display-3 h1">
+                  “O nome de Trasmontano, que quer dizer filho de
+                  Trás-os-Montes, pois assim se chama o Reino Maravilhoso de que
+                  vos falei.” (Miguel Torga)
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -143,4 +176,27 @@
     </footer>
     <script src="../../assets/js/main.min.js"></script>
   </body>
+  <script>
+    $(".tradution").click(function () {
+      var language = $(this).attr("data-tradution");
+      if (language == "pt") {
+        $("#description").html("");
+        $("#description").html(
+          " Situado nas margens do rio Corgo, tem uma área de aproximadamente 33 hectares. Encontra-se ligado ao pulmão da cidade, Parque Florestal, e engloba vários aparelhos à disposição de qualquer cidadão, tais como campos polidesportivos, parque de merendas de Codessais, piscinas municipais abertas, parque infantil, cafés, itinerários pedestres e ainda alguns moinhos recuperados."
+        );
+      }
+      if (language == "en") {
+        $("#description").html("");
+        $("#description").html(
+          "Located on the banks of the Corgo River, it has an area of approximately 33 hectares. It is connected to the lung of the Parque Florestal, and includes several devices at the available to any citizen, such as camps sports centers, Codessais picnic area, swimming pools open municipal parks, children's playground, cafes, itineraries pedestrians and some recovered windmills."
+        );
+      }
+      if (language == "es") {
+        $("#description").html("");
+        $("#description").html(
+          "Ubicada a orillas del río Corgo, tiene un área de aproximadamente 33 hectáreas. Está conectado al pulmón del Parque Florestal, e incluye varios dispositivos en el disponible para cualquier ciudadano, como campamentos centros deportivos, merendero Codessais, piscinas parques municipales abiertos, parque infantil, cafés, itinerarios peatones y algunos molinos de viento recuperados."
+        );
+      }
+    });
+  </script>
 </html>
