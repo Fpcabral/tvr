@@ -52,11 +52,28 @@
               </li>
             </ul>
 
-            <!-- <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Sobre</a>
+                <a
+                  class="nav-link tradution"
+                  data-tradution="en"
+                  style="display: inline; cursor: pointer"
+                  >EN</a
+                >
+                <a
+                  class="nav-link tradution"
+                  data-tradution="es"
+                  style="display: inline; cursor: pointer"
+                  >ES</a
+                >
+                <a
+                  class="nav-link tradution"
+                  data-tradution="pt"
+                  style="display: inline; cursor: pointer"
+                  >PT</a
+                >
               </li>
-            </ul> -->
+            </ul>
           </div>
         </nav>
         <!--end:Nav -->
@@ -68,9 +85,7 @@
         <div class="container">
           <div class="row d-flex align-items-start">
             <div class="col-md-11">
-              <h1 class="display-3">
-		      Covilhete
-	      </h1>
+              <h1 class="display-3">Covilhete</h1>
             </div>
           </div>
         </div>
@@ -81,21 +96,38 @@
         <div id="portfolio" class="container">
           <div id="portfolio-filters">
             <ul class="p-0">
-              <li style="list-style-type:none;"><a style="color:#CF9725;" href="../../index.html">voltar</a></li>
+              <li style="list-style-type: none">
+                <a style="color: #cf9725" href="../../index.html">voltar</a>
+              </li>
             </ul>
             <div class="row mb-5">
               <div class="col-12">
-                <img src="../../assets/img/covilhete.jpg" alt="" style="width:600px; height:auto;">
+                <img
+                  src="../../assets/img/covilhete.jpg"
+                  alt=""
+                  style="width: 600px; height: auto"
+                />
               </div>
             </div>
             <div class="row">
               <div class="col-12">
-		      <p class="h4">Consiste em enrolar pedaços de bucho e tripa de vaca com presunto e um ramo de salsa no meio. É o prato mais característico do Chaxoila e cuja receita passou a ser replicada por outros restaurantes da cidade de Vila Real, tornando-se numa das maiores especialidades da capital transmontana. </p> </p>
+                <p class="h4" id="description">
+                  Consiste em enrolar pedaços de bucho e tripa de vaca com
+                  presunto e um ramo de salsa no meio. É o prato mais
+                  característico do Chaxoila e cuja receita passou a ser
+                  replicada por outros restaurantes da cidade de Vila Real,
+                  tornando-se numa das maiores especialidades da capital
+                  transmontana.
+                </p>
               </div>
             </div>
-	    <div class="row mt-5">
-                <div class="col-md-11 ml-auto display-3 h1">“O nome de Trasmontano, que quer dizer filho de Trás-os-Montes, pois assim se chama o Reino Maravilhoso de que vos falei.” (Miguel Torga)</div>
+            <div class="row mt-5">
+              <div class="col-md-11 ml-auto display-3 h1">
+                “O nome de Trasmontano, que quer dizer filho de Trás-os-Montes,
+                pois assim se chama o Reino Maravilhoso de que vos falei.”
+                (Miguel Torga)
               </div>
+            </div>
           </div>
         </div>
         <!-- /end:portfolio -->
@@ -143,4 +175,27 @@
     </footer>
     <script src="../../assets/js/main.min.js"></script>
   </body>
+  <script>
+    $(".tradution").click(function () {
+      var language = $(this).attr("data-tradution");
+      if (language == "pt") {
+        $("#description").html("");
+        $("#description").html(
+          "Consiste em enrolar pedaços de bucho e tripa de vaca com presunto e um ramo de salsa no meio. É o prato mais característico do Chaxoila e cuja receita passou a ser replicada por outros restaurantes da cidade de Vila Real, tornando-se numa das maiores especialidades da capital transmontana."
+        );
+      }
+      if (language == "en") {
+        $("#description").html("");
+        $("#description").html(
+          "It consists of rolling pieces of tripe and cow tripe with ham and a sprig of parsley in the middle. It is the most characteristic of Chaxoila and whose recipe became replicated by other restaurants in the city of Vila Real, becoming one of the capital's greatest specialties transmontana."
+        );
+      }
+      if (language == "es") {
+        $("#description").html("");
+        $("#description").html(
+          "Consiste en enrollar trozos de callos y callos de vaca con jamón y una ramita de perejil en el medio. Es lo más característica de Chaxoila y cuya receta se convirtió replicado por otros restaurantes de la ciudad de Vila Real, convirtiéndose en una de las mayores especialidades de la capital transmontana."
+        );
+      }
+    });
+  </script>
 </html>

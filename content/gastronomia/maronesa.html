@@ -11,7 +11,7 @@
       name="description"
       content="Free minimal portfolio web site template,minmal portfolio,porfolio,bootstrap template,html template,photography "
     />
-    <title> Turismo Vila Real - Maronesa Dop</title>
+    <title>Turismo Vila Real - Maronesa Dop</title>
     <link
       href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap"
       rel="stylesheet"
@@ -52,11 +52,28 @@
               </li>
             </ul>
 
-            <!-- <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Sobre</a>
+                <a
+                  class="nav-link tradution"
+                  data-tradution="en"
+                  style="display: inline; cursor: pointer"
+                  >EN</a
+                >
+                <a
+                  class="nav-link tradution"
+                  data-tradution="es"
+                  style="display: inline; cursor: pointer"
+                  >ES</a
+                >
+                <a
+                  class="nav-link tradution"
+                  data-tradution="pt"
+                  style="display: inline; cursor: pointer"
+                  >PT</a
+                >
               </li>
-            </ul> -->
+            </ul>
           </div>
         </nav>
         <!--end:Nav -->
@@ -68,9 +85,7 @@
         <div class="container">
           <div class="row d-flex align-items-start">
             <div class="col-md-11">
-              <h1 class="display-3">
-		      <i>Maronesa</i> Dop 
-              </h1>
+              <h1 class="display-3"><i>Maronesa</i> Dop</h1>
             </div>
           </div>
         </div>
@@ -81,21 +96,40 @@
         <div id="portfolio" class="container">
           <div id="portfolio-filters">
             <ul class="p-0">
-              <li style="list-style-type:none;"><a style="color:#CF9725;" href="../../index.html">voltar</a></li>
+              <li style="list-style-type: none">
+                <a style="color: #cf9725" href="../../index.html">voltar</a>
+              </li>
             </ul>
             <div class="row mb-5">
               <div class="col-12">
-                <img src="../../assets/img/maronesa-dop.jpg" alt="" style="width:600px; height:auto;">
+                <img
+                  src="../../assets/img/maronesa-dop.jpg"
+                  alt=""
+                  style="width: 600px; height: auto"
+                />
               </div>
             </div>
             <div class="row">
               <div class="col-12">
-                <p class="h4">Esta carne é obtida a partir de bovinos de uma raça de montanha, primitiva, natural e rústica, a raça Maronesa. Os bovinos são provenientes da área delimitada pelas Serras do Marão, Alvão e Padrela e trata-se de uma carne de gordura branca a branco marfim, conforme se trata de vitela ou animal adulto. Estes animais são alimentados maioritariamente ao ar livre ou em estábulo, quando as condições atmosféricas se encontram adversas à reprodução de pastagens.</p>
+                <p class="h4">
+                  Esta carne é obtida a partir de bovinos de uma raça de
+                  montanha, primitiva, natural e rústica, a raça Maronesa. Os
+                  bovinos são provenientes da área delimitada pelas Serras do
+                  Marão, Alvão e Padrela e trata-se de uma carne de gordura
+                  branca a branco marfim, conforme se trata de vitela ou animal
+                  adulto. Estes animais são alimentados maioritariamente ao ar
+                  livre ou em estábulo, quando as condições atmosféricas se
+                  encontram adversas à reprodução de pastagens.
+                </p>
               </div>
             </div>
-	    <div class="row mt-5">
-                <div class="col-md-11 ml-auto display-3 h1">“O nome de Trasmontano, que quer dizer filho de Trás-os-Montes, pois assim se chama o Reino Maravilhoso de que vos falei.” (Miguel Torga)</div>
+            <div class="row mt-5">
+              <div class="col-md-11 ml-auto display-3 h1">
+                “O nome de Trasmontano, que quer dizer filho de Trás-os-Montes,
+                pois assim se chama o Reino Maravilhoso de que vos falei.”
+                (Miguel Torga)
               </div>
+            </div>
           </div>
         </div>
         <!-- /end:portfolio -->
@@ -143,4 +177,27 @@
     </footer>
     <script src="../../assets/js/main.min.js"></script>
   </body>
+  <script>
+    $(".tradution").click(function () {
+      var language = $(this).attr("data-tradution");
+      if (language == "pt") {
+        $("#description").html("");
+        $("#description").html(
+          "Esta carne é obtida a partir de bovinos de uma raça de montanha, primitiva, natural e rústica, a raça Maronesa. Os bovinos são provenientes da área delimitada pelas Serras do Marão, Alvão e Padrela e trata-se de uma carne de gordura branca a branco marfim, conforme se trata de vitela ou animal adulto. Estes animais são alimentados maioritariamente ao ar livre ou em estábulo, quando as condições atmosféricas se encontram adversas à reprodução de pastagens."
+        );
+      }
+      if (language == "en") {
+        $("#description").html("");
+        $("#description").html(
+          "This meat is obtained from cattle of a breed of mountain, primitive, natural and rustic, the Maronesa race. The bovines come from the area bounded by the Serra do Marão, Alvão and Padrela and it is a fat meat white to ivory white, depending on the calf or animal adult. These animals are mostly fed to the air free or stable, when atmospheric conditions find adverse to the reproduction of pastures."
+        );
+      }
+      if (language == "es") {
+        $("#description").html("");
+        $("#description").html(
+          "Esta carne se obtiene de bovinos de una raza de montañesa, primitiva, natural y rústica, la raza Maronesa. los los bovinos proceden de la zona delimitada por la Serra do Marão, Alvão y Padrela y es una carne grasa blanco a blanco marfil, dependiendo del ternero o animal adulto. Estos animales se alimentan principalmente al aire. libre o estable, cuando las condiciones atmosféricas encuentran adverso a la reproducción de los pastos."
+        );
+      }
+    });
+  </script>
 </html>

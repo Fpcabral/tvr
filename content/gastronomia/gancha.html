@@ -52,11 +52,28 @@
               </li>
             </ul>
 
-            <!-- <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Sobre</a>
+                <a
+                  class="nav-link tradution"
+                  data-tradution="en"
+                  style="display: inline; cursor: pointer"
+                  >EN</a
+                >
+                <a
+                  class="nav-link tradution"
+                  data-tradution="es"
+                  style="display: inline; cursor: pointer"
+                  >ES</a
+                >
+                <a
+                  class="nav-link tradution"
+                  data-tradution="pt"
+                  style="display: inline; cursor: pointer"
+                  >PT</a
+                >
               </li>
-            </ul> -->
+            </ul>
           </div>
         </nav>
         <!--end:Nav -->
@@ -68,9 +85,7 @@
         <div class="container">
           <div class="row d-flex align-items-start">
             <div class="col-md-11">
-              <h1 class="display-3">
-		      Ganchas de São Brás
-	      </h1>
+              <h1 class="display-3">Ganchas de São Brás</h1>
             </div>
           </div>
         </div>
@@ -81,21 +96,37 @@
         <div id="portfolio" class="container">
           <div id="portfolio-filters">
             <ul class="p-0">
-              <li style="list-style-type:none;"><a style="color:#CF9725;" href="../../index.html">voltar</a></li>
+              <li style="list-style-type: none">
+                <a style="color: #cf9725" href="../../index.html">voltar</a>
+              </li>
             </ul>
             <div class="row mb-5">
               <div class="col-12">
-                <img src="../../assets/img/gancha.jpg" alt="" style="width:600px; height:auto;">
+                <img
+                  src="../../assets/img/gancha.jpg"
+                  alt=""
+                  style="width: 600px; height: auto"
+                />
               </div>
             </div>
             <div class="row">
               <div class="col-12">
-		      <p class="h4">Uma grande tradição da cidade de Vila Real, está ligada a este doce, a 3 de fevereiro faz-se uma festa em honra de São Brás na igreja de São Dinis, onde os rapazes oferecem a gancha às raparigas na esperança de “apanhar raparigas com vontade de namorar”.  </p>
+                <p class="h4">
+                  Uma grande tradição da cidade de Vila Real, está ligada a este
+                  doce, a 3 de fevereiro faz-se uma festa em honra de São Brás
+                  na igreja de São Dinis, onde os rapazes oferecem a gancha às
+                  raparigas na esperança de “apanhar raparigas com vontade de
+                  namorar”.
+                </p>
               </div>
             </div>
-	    <div class="row mt-5">
-                <div class="col-md-11 ml-auto display-3 h1">“O nome de Trasmontano, que quer dizer filho de Trás-os-Montes, pois assim se chama o Reino Maravilhoso de que vos falei.” (Miguel Torga)</div>
+            <div class="row mt-5">
+              <div class="col-md-11 ml-auto display-3 h1">
+                “O nome de Trasmontano, que quer dizer filho de Trás-os-Montes,
+                pois assim se chama o Reino Maravilhoso de que vos falei.”
+                (Miguel Torga)
               </div>
+            </div>
           </div>
         </div>
         <!-- /end:portfolio -->
@@ -143,4 +174,27 @@
     </footer>
     <script src="../../assets/js/main.min.js"></script>
   </body>
+  <script>
+    $(".tradution").click(function () {
+      var language = $(this).attr("data-tradution");
+      if (language == "pt") {
+        $("#description").html("");
+        $("#description").html(
+          " Uma grande tradição da cidade de Vila Real, está ligada a este doce, a 3 de fevereiro faz-se uma festa em honra de São Brás na igreja de São Dinis, onde os rapazes oferecem a gancha às raparigas na esperança de 'apanhar raparigas com vontade de namorar'."
+        );
+      }
+      if (language == "en") {
+        $("#description").html("");
+        $("#description").html(
+          "A great tradition in the city of Vila Real is linked to this Doce, on February 3 a party is held in honor of São Brás in the church of São Dinis, where the boys offer the gancha to girls in the hope of 'catching girls with a desire to flirt'."
+        );
+      }
+      if (language == "es") {
+        $("#description").html("");
+        $("#description").html(
+          "Una gran tradición en la ciudad de Vila Real está ligada a este Doce, el 3 de febrero se realiza una fiesta en honor a São Brás en la iglesia de São Dinis, donde los muchachos ofrecen la gancha a chicas con la esperanza de 'atrapar chicas con el deseo de Ligar'."
+        );
+      }
+    });
+  </script>
 </html>

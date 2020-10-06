@@ -52,11 +52,28 @@
               </li>
             </ul>
 
-            <!-- <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Sobre</a>
+                <a
+                  class="nav-link tradution"
+                  data-tradution="en"
+                  style="display: inline; cursor: pointer"
+                  >EN</a
+                >
+                <a
+                  class="nav-link tradution"
+                  data-tradution="es"
+                  style="display: inline; cursor: pointer"
+                  >ES</a
+                >
+                <a
+                  class="nav-link tradution"
+                  data-tradution="pt"
+                  style="display: inline; cursor: pointer"
+                  >PT</a
+                >
               </li>
-            </ul> -->
+            </ul>
           </div>
         </nav>
         <!--end:Nav -->
@@ -68,9 +85,7 @@
         <div class="container">
           <div class="row d-flex align-items-start">
             <div class="col-md-11">
-              <h1 class="display-3">
-		      Vinhos
-	      </h1>
+              <h1 class="display-3">Vinhos</h1>
             </div>
           </div>
         </div>
@@ -81,21 +96,40 @@
         <div id="portfolio" class="container">
           <div id="portfolio-filters">
             <ul class="p-0">
-              <li style="list-style-type:none;"><a style="color:#CF9725;" href="../../index.html">voltar</a></li>
+              <li style="list-style-type: none">
+                <a style="color: #cf9725" href="../../index.html">voltar</a>
+              </li>
             </ul>
             <div class="row mb-5">
               <div class="col-12">
-                <img src="../../assets/img/vinhos.jpg" alt="" style="width:600px; height:auto;">
+                <img
+                  src="../../assets/img/vinhos.jpg"
+                  alt=""
+                  style="width: 600px; height: auto"
+                />
               </div>
             </div>
             <div class="row">
               <div class="col-12">
-		      <p class="h4"> Devido às várias condições geográficas, há existência de um microclima singular e á existência de um solo xistoso, é possível produzir um vinho de excelente qualidade. Já durante o século XVIII, Marques de Pombal instituiu a região Demarcada do Douro, devido às características únicas desta região. Vila Real dá imagem a vários vinhos, internacionalmente conhecidos, como é o caso do famoso Mateus Rosé ou dos vinhos da Adega de Vila Real. </p>
+                <p class="h4">
+                  Devido às várias condições geográficas, há existência de um
+                  microclima singular e á existência de um solo xistoso, é
+                  possível produzir um vinho de excelente qualidade. Já durante
+                  o século XVIII, Marques de Pombal instituiu a região Demarcada
+                  do Douro, devido às características únicas desta região. Vila
+                  Real dá imagem a vários vinhos, internacionalmente conhecidos,
+                  como é o caso do famoso Mateus Rosé ou dos vinhos da Adega de
+                  Vila Real.
+                </p>
               </div>
             </div>
-	    <div class="row mt-5">
-                <div class="col-md-11 ml-auto display-3 h1">“O nome de Trasmontano, que quer dizer filho de Trás-os-Montes, pois assim se chama o Reino Maravilhoso de que vos falei.” (Miguel Torga)</div>
+            <div class="row mt-5">
+              <div class="col-md-11 ml-auto display-3 h1">
+                “O nome de Trasmontano, que quer dizer filho de Trás-os-Montes,
+                pois assim se chama o Reino Maravilhoso de que vos falei.”
+                (Miguel Torga)
               </div>
+            </div>
           </div>
         </div>
         <!-- /end:portfolio -->
@@ -143,4 +177,27 @@
     </footer>
     <script src="../../assets/js/main.min.js"></script>
   </body>
+  <script>
+    $(".tradution").click(function () {
+      var language = $(this).attr("data-tradution");
+      if (language == "pt") {
+        $("#description").html("");
+        $("#description").html(
+          "Devido às várias condições geográficas, há existência de um microclima singular e á existência de um solo xistoso, é possível produzir um vinho de excelente qualidade. Já durante o século XVIII, Marques de Pombal instituiu a região Demarcada do Douro, devido às características únicas desta região. Vila Real dá imagem a vários vinhos, internacionalmente conhecidos, como é o caso do famoso Mateus Rosé ou dos vinhos da Adega de Vila Real."
+        );
+      }
+      if (language == "en") {
+        $("#description").html("");
+        $("#description").html(
+          "Due to the various geographical conditions, there is a singular microclimate and the existence of a schistous soil, is possible to produce a wine of excellent quality. Already during the 18th century, Marques de Pombal instituted the Demarcated region Douro, due to the unique characteristics of this region. Villa Real gives image to several wines, internationally known, as is the case with the famous Mateus Rosé or the wines from Adega de Real Village."
+        );
+      }
+      if (language == "es") {
+        $("#description").html("");
+        $("#description").html(
+          "Debido a las diversas condiciones geográficas, existe una microclima singular y la existencia de un suelo esquistoso, es posible producir un vino de excelente calidad. Ya durante el siglo XVIII, el Marqués de Pombal instituyó la Región Demarcada Duero, debido a las características únicas de esta región. Villa Real da imagen a varios vinos, reconocidos internacionalmente, como es el caso del famoso Mateus Rosé o los vinos de Adega de Real Village."
+        );
+      }
+    });
+  </script>
 </html>
